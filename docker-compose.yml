@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  jupyterlab-server:
+    build:
+      args:
+        - username=sudoku-solver
+        - uid=1000
+        - gid=100
+      context: ../
+      dockerfile: sudoku-solver/Dockerfile
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./src:/home/sudoku-solver/project/src
+      - ./notebooks:/home/sudoku-solver/project/notebooks
+    init: true
+    stdin_open: true
+    tty: true

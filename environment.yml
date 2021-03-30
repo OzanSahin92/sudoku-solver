@@ -1,0 +1,13 @@
+name: sudoku-solver
+
+channels:
+  - conda-forge
+  - anaconda
+  - defaults
+
+dependencies:
+  - python==3.8.5
+  - jupyterlab
+  - pandas
+  - numpy
+
