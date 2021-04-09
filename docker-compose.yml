@@ -13,6 +13,7 @@ services:
     volumes:
       - ./src:/home/sudoku-solver/project/src
       - ./notebooks:/home/sudoku-solver/project/notebooks
+      - ./data:/home/sudoku-solver/project/data
     init: true
     stdin_open: true
     tty: true
