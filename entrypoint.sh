@@ -1,5 +1,5 @@
 #!/bin/bash --login
 set -e
 
-conda activate sudoku-solver
+conda activate sudsolv
 exec "$@"

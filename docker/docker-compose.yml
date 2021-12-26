@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  jupyterlab-server:
+    image: sudoku-solver
+    restart: always
+    ports:
+      - "8888:8888"
+    volumes:
+      - ../src:/home/sudoku-solver/project/src
+      - ../notebooks:/home/sudoku-solver/project/notebooks
+      - ../data:/home/sudoku-solver/project/data
+    init: true
+    stdin_open: true
+    tty: true
+volumes:
+  jupyterlab-storage:
+

@@ -35,10 +35,10 @@ RUN adduser --disabled-password \
 RUN mkdir $PROJECT_DIR
 WORKDIR $PROJECT_DIR
 
-COPY sudoku-solver/environment.yml /tmp/
+COPY environment.yml /tmp/
 RUN chown $UID:$GID /tmp/environment.yml
 
-COPY sudoku-solver/entrypoint.sh /usr/local/bin/
+COPY entrypoint.sh /usr/local/bin/
 RUN chown $UID:$GID /usr/local/bin/entrypoint.sh && \
     chmod u+x /usr/local/bin/entrypoint.sh
 

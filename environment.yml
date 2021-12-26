@@ -1,4 +1,4 @@
-name: sudoku-solver
+name: sudsolv
 
 channels:
   - conda-forge
