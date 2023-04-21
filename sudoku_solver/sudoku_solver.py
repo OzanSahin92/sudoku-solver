@@ -40,10 +40,11 @@ def solve(field):
                         field[y][x] = 0
                 return
     print(field)
+    np.savetxt("data/processed/solved_sudoku_field.txt", field, fmt="%.0f")
 
 
 def main():
-    path_to_sudoku_field = "../data/sudoku_field.txt"
+    path_to_sudoku_field = "data/raw/sudoku_field.txt"
 
     sudoku_field = np.loadtxt(path_to_sudoku_field, dtype=int)
 
