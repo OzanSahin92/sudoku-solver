@@ -1,11 +1,9 @@
-#!/usr/bin/env python
-# coding: utf-8
-
+"""Solving sudoku"""
 import numpy as np
 
 
-# checks if val is possible on positions y,x on the sudoku field
 def check_pos_val(field, y, x, val):
+    """Checks if val is possible on positions y,x on the sudoku field"""
     # check row of pos
     for i in range(9):
         if field[y][i] == val:
@@ -25,8 +23,8 @@ def check_pos_val(field, y, x, val):
     return True
 
 
-# solve function uses backtracking recursively
 def solve(field):
+    """Solve function uses backtracking recursively"""
     for y in range(9):
         for x in range(9):
             if field[y][x] == 0:
@@ -45,18 +43,17 @@ def solve(field):
 
 
 def main():
-    path_to_sudoku_field = '../data/sudoku_field.txt'
+    path_to_sudoku_field = "../data/sudoku_field.txt"
 
     sudoku_field = np.loadtxt(path_to_sudoku_field, dtype=int)
 
-    print('Solving the following Sudoku field: \n')
+    print("Solving the following Sudoku field: \n")
 
     print(sudoku_field)
 
-    print('\n\n')
+    print("\n\n")
 
-    print('Solved Sudoku field: \n')
-
+    print("Solved Sudoku field: \n")
     solve(sudoku_field)
 
 
